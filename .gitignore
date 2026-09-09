@@ -1,0 +1,5 @@
+# Ignorar carpetas __pycache__ --- entiendo que son las carpetas de cache de python
+__pycache__/
+
+# Ignorar todos los archivos .log --- en cualquier carpeta
+*.log
