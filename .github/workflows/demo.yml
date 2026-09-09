@@ -1,0 +1,24 @@
+name: Demo Workflow con Input
+
+on:
+  workflow_dispatch:
+    inputs:
+      mensaje:
+        description: 'Ejercicio 6'
+        required: true
+        default: 'Hola dola personalizado' #Ejercicio 6
+        type: string
+
+jobs:
+  mostrar-mensaje:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Mostrar mensaje del usuario
+        run: |
+          echo "Dame el mensaje:"
+          echo "${{ github.event.inputs.mensaje }}"      
+      - name: Mostrar mensaje con formato
+        run: |
+          echo "El mensaje que escribiste es:"
+          echo "   \"${{ github.event.inputs.mensaje }}\""
